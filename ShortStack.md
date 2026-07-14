@@ -1,0 +1,4 @@
+- ShortStack 3.* 和 4.*的版本区别很大，主要体现在对多重比对reads的处理
+- 1) 3.*的版本bowtie --wrapper basic-0 -q -v 1 -p 8 -S -a -m 50 --best --strata --sam-RG ID:Coni.1_trimmed refseq/genome - 
+     4.*的版本bowtie-align-s --wrapper basic-0 - f -p 6 -v 1 -k 20 -S --best --strata -x ../../genome.fa -
+- 2) 前期对reads的处理不一致，4.*版本增加了完全相同reads的合并步骤
